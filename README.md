@@ -2,6 +2,11 @@
 
 The `scriptoned` project is a Discord automation application.
 
+<!-- Badges -->
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code-of-conduct.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Code style: standard](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/standard/standard)
+
 ## Table of Contents
 
 - [Requirements](#Requirements)
