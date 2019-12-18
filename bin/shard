@@ -1,0 +1,15 @@
+const debug = require('debug')
+const Discord = require('discord.js')
+const path = require('path')
+const preferences = require('../preferences')
+
+const log = debug('scriptoned:shardingManager')
+const shardingManager = new Discord.ShardingManager(path.join(__dirname, '../index.js'), {
+  token: preferences.client.token
+})
+
+shardingManager.on('launch', shard => {
+  log('Launched shard#%d.', shard.id)
+})
+
+shardingManager.spawn()
