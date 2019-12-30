@@ -3,6 +3,7 @@ const package = require('../../package')
 module.exports = {
   name: 'debug',
   category: 'misc',
+  permission: 'everyone',
 
   fn: (client, message, opts) => {
     message.reply('Generating report...')

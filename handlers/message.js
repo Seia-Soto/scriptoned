@@ -24,11 +24,22 @@ module.exports = (client, message) => {
   message.parameters = message.content.replace(message.prefix, '').trim().split(' ')
   message.command = message.parameters.shift()
 
+  message.member.permission = structures.permission.accumulate(message.member)
+
   if (!commands[message.command]) return
+
+  // NOTE: Exceptions that need returning message
   if (!message.channel.permissionsFor(message.guild.me).has('SEND_MESSAGES')) { // NOTE: If app can't send message
     return message.member.send(util.format(
       translations.ko.system.MinimalPermissionNotAvailable,
       message.guild.name, message.channel.name
+    ))
+      .catch(null)
+  }
+  if (!message.member.permission.flag & structures.permission._internal[message.command.permission || 'everyone']) { // NOTE: Bitfield operation
+    return message.channel.send(util.format(
+      translations.ko.system.UserPermissionLeak,
+      message.command, message.member.permission.readable
     ))
   }
 

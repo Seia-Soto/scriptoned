@@ -1,4 +1,7 @@
+// NOTE: Ref <https://medium.com/@venuebook_j/using-bitfields-in-javascript-for-simple-permission-systems-fce3b35aee58>
+
 module.exports = {
-  ADMINISTRATOR: 0x00000010,
-  MANAGE_GUILD: 0x00000001
+  ADMINISTRATOR: 4,
+  MANAGE_GUILD: 2,
+  everyone: 1
 }
