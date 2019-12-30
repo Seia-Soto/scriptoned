@@ -24,9 +24,12 @@ module.exports = (client, message) => {
   message.parameters = message.content.replace(message.prefix, '').trim().split(' ')
   message.command = message.parameters.shift()
 
-  message.member.permission = structures.permission.accumulate(message.member)
-
   if (!commands[message.command]) return
+
+  message.translations = translations.ko.commands[commands[message.command]./* original */name]
+  message.translations._raw = translations
+
+  message.member.permission = structures.permission.accumulate(message.member)
 
   // NOTE: Exceptions that need returning message
   if (!message.channel.permissionsFor(message.guild.me).has('SEND_MESSAGES')) { // NOTE: If app can't send message
