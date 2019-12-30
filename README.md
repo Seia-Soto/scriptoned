@@ -10,6 +10,8 @@ The `scriptoned` project is a Discord automation application.
 ## Table of Contents
 
 - [Requirements](#Requirements)
+- [Installation](#Installation)
+- [Directories](#Directories)
 - [License](#License)
 
 ----
@@ -22,6 +24,36 @@ To develop and run this project, you need to install some software working hard 
 - [MySQL](https://www.mysql.com/)
 - [Yarn](https://yarnpkg.com/)
 - GCC/G++ compilers such as [Visual Studio Build Tools](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017) or `build-essential`
+
+# Installation
+
+1. Fork or download this Git repository.
+  - `git clone <repository url>`
+2. Install the dependencies via Yarn.
+  - `yarn`
+3. Fill or edit the missing(or invalid) values of [`preferences.js`](/preferences.js)
+  - The token put on `client.token` is not valid value.
+4. Start the project:
+  - as `normal` state: `yarn start`
+  - as `sharding` state: `yarn shard`
+  - as `debug` state: `yarn debug`
+  - as `debug sharding` state: `yarn debug-shard`
+
+# Directories
+
+Also, following list includes important files.
+
+- [bin](/bin): Where start up files with options are located.
+- [commands](/commands): Where the command modules are located.
+  - [refs.js](/commands/refs.js): Specific categories which need to be exposed.
+- [etc](/etc): ETC.
+  - [sql](/etc/sql): Where the SQL queries are stored. (static)
+- [handlers](/handlers): Where the Discord.js event handlers are located.
+- [structures](/structures): Modules and important logics.
+  - [database](/structures/database): Exports Knex.js client.
+  - [message](/structures/message): Where the modules required in `message` handler.
+  - [permission](/structures/permission): Logics related to user permission.
+- [translations](/translations): Where the translations are stored.
 
 # License
 
