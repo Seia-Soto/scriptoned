@@ -8,6 +8,8 @@ const shardingManager = new Discord.ShardingManager(path.join(__dirname, '../ind
   token: preferences.client.token
 })
 
+log('Spawning shards...')
+
 shardingManager.on('launch', shard => {
   log('Launched shard#%d.', shard.id)
 })

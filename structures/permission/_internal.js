@@ -1,0 +1,4 @@
+module.exports = {
+  ADMINISTRATOR: 0x00000010,
+  MANAGE_GUILD: 0x00000001
+}

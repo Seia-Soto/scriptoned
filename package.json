@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "shard": "node bin/shard",
-    "debug-windows": "@powershell -Command $env:DEBUG='*'; node index.js",
-    "debug-windows--shard": "@powershell -Command $env:DEBUG='*'; node bin/shard"
+    "start": "cross-env DEBUG=scriptoned:app NODE_ENV=PRODUCTION node index.js",
+    "shard": "cross-env DEBUG=scriptoned:shardingManager NODE_ENV=PRODUCTION node bin/shard",
+    "debug": "cross-env DEBUG=* NODE_ENV=DEVELOPMENT node index.js",
+    "debug-shard": "cross-env DEBUG=* NODE_ENV=DEVELOPMENT node bin/shard"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/serium-departments/scriptoned#readme",
   "dependencies": {
     "@discordjs/uws": "^11.149.1",
+    "cross-env": "^6.0.3",
     "debug": "^4.1.1",
     "discord.js": "^11.5.1",
     "erlpack": "hammerandchisel/erlpack",
