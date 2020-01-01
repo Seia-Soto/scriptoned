@@ -23,8 +23,7 @@ module.exports = {
       if (!commandSets[commandsSources[i].category]) {
         commandSets[commandsSources[i].category] = []
       }
-
-      if (!commandSets[commandsSources[i].category].includes(commandsSources[i].name)) {
+      if (!commandsSources[i].isAlias) {
         commandSets[commandsSources[i].category].push(commandsSources[i].name)
       }
     }
@@ -58,7 +57,9 @@ module.exports = {
         text += commandSets[category].join(', ') + '\n'
       }
 
-      text += '\n' + message.translations._raw.ko.system.EmbedLinksNotAvailable
+      if (opts.preferences.errorTracing) {
+        text += '\n' + message.translations._raw[message.member.preferences.language].system.EmbedLinksNotAvailable
+      }
 
       message.channel.send(text)
     }

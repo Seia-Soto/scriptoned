@@ -12,7 +12,7 @@ for (let k = 0; k < names.length; k++) {
 
   command.aliases = command.aliases || []
 
-  module.exports[names[k]] = command
+  module.exports[command.name] = command
 
   for (let i = 0; i < command.aliases.length; i++) {
     const alias = Object.assign({}, command)

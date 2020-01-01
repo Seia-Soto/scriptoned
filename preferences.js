@@ -1,6 +1,6 @@
 module.exports = {
   /* Discord */client: {
-    token: 'NjMxNDM3MTM2ODAxMDM4MzQ2.XfoP_w.WHKwU4Zt4B0RM3Ku4ooWpx98JMA',
+    token: '',
     options: {
       apiRequestMethod: 'sequential',
       disableEveryone: true,
@@ -27,7 +27,16 @@ module.exports = {
   },
   app/* scriptoned */: {
     defaults: {
-      prefix: 'sn'
+      users: {
+        language: 'ko',
+        updateNotifying: 1,
+        errorTracing: 1
+      },
+      guilds: {
+        prefix: 'sn',
+        errorTracing: 1,
+        userVerification: 0
+      }
     }
   }
 }
