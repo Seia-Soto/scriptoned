@@ -30,7 +30,7 @@ module.exports = {
 
     const categories = Object.keys(commandSets)
 
-    if (message.channel.permissionsFor(message.guild.me).has('EMBED_LINKS')) {
+    if (opts.permissions.embedAvailable) {
       const embed = {
         title: message.translations.title,
         description: message.translations.description,

@@ -55,6 +55,9 @@ module.exports = async (client, message) => {
   commands[message.command].fn(client, message, {
     /* conseq */preferences: {
       errorTracing: message.guild.preferences.errorTracing && message.member.preferences.errorTracing
+    },
+    /* additional */permissions: {
+      embedAvailable: message.channel.permissionsFor(message.guild.me).has('EMBED_LINKS')
     }
   })
 }

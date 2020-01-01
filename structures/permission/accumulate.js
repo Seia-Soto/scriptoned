@@ -6,7 +6,7 @@ module.exports = member => {
   const permission = {
     available: member.permissions.toArray(),
     readable: 'everyone',
-    flag: 0x0
+    flag: 0
   }
 
   for (let k = 0; k < interpermissionsSerialized.length; k++) {

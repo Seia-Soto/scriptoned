@@ -6,7 +6,7 @@ module.exports = {
   category: 'preferences',
   permission: 'everyone',
   aliases: [
-    'switchErrorTracing',
+    'switcherrortracing',
     'switch-errortrace',
     'switch-errortracking',
     'switch-errortrack',

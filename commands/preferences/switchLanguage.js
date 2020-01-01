@@ -6,7 +6,7 @@ module.exports = {
   category: 'preferences',
   permission: 'everyone',
   aliases: [
-    'switchLanguage',
+    'switchlanguage',
     's-language',
     'language',
     'lang'

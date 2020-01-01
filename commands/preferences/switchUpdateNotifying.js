@@ -6,7 +6,7 @@ module.exports = {
   category: 'preferences',
   permission: 'everyone',
   aliases: [
-    'switchUpdateNotifying',
+    'switchupdatenotifying',
     'switch-updatenotify',
     's-updatenotifying',
     's-updatenotify'
