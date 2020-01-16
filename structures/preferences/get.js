@@ -1,7 +1,10 @@
 const { knex } = require('../database')
+const cache = require('./cache')
 const preferences = require('../../preferences')
 
 module.exports = async (type, serviceIdx) => {
+  if (cache[serviceIdx]) return cache[serviceIdx]
+
   let result = {}
 
   try {

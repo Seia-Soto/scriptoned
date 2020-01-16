@@ -1,6 +1,11 @@
-# scriptoned
+# scriptoned-base
 
 The `scriptoned` project is a Discord automation application.
+
+- `scriptoned-base` is the modified version of bare fork of original scriptoned repository to
+  provide the normalized code of the scriptoned project. Also, this repository will apply the
+  every core code updates from original repository. If you want clean code base without any
+  additional commands including not basic feature, you can use this repository instead.
 
 <!-- Badges -->
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code-of-conduct.md)

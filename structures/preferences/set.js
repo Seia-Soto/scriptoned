@@ -1,6 +1,9 @@
 const { knex } = require('../database')
+const cache = require('./cache')
 
 module.exports = async (type, serviceIdx, data) => {
+  cache[serviceIdx] = data
+
   delete data.idx
   delete data.serviceIdx
 
