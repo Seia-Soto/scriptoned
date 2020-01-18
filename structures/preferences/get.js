@@ -3,7 +3,7 @@ const cache = require('./cache')
 const preferences = require('../../preferences')
 
 module.exports = async (type, serviceIdx) => {
-  if (cache[serviceIdx]) return cache[type + serviceIdx]
+  if (cache[type + serviceIdx]) return cache[type + serviceIdx]
 
   let result = {}
 
