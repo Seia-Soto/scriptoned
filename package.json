@@ -1,6 +1,6 @@
 {
   "name": "scriptoned",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "The next version of Serium.",
   "main": "index.js",
   "scripts": {
