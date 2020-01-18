@@ -26,5 +26,7 @@ module.exports = async (type, serviceIdx) => {
     throw new Error(error)
   }
 
+  cache[type + serviceIdx] = result
+
   return result
 }
